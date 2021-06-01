@@ -100,10 +100,10 @@ checkpointer = ModelCheckpoint(filepath='img_model.best.hdf5',
 					
 r=model.fit(
     training_set,
-    steps_per_epoch=1000,  # No of images in training set
-    epochs=10,
+    steps_per_epoch=840,  # No of images in training set
+    epochs=5,
     validation_data=test_set,
-    validation_steps=500,
+    validation_steps=360,
 	callbacks=[early_stop, checkpointer]
 )  # No of images in test set
 
