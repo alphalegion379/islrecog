@@ -76,7 +76,7 @@ test_datagen = ImageDataGenerator(rescale=1.0 / 255)
 training_set = train_datagen.flow_from_directory(
     "myProcessData/train",
     target_size=(sz, sz),
-    batch_size=5,
+    batch_size=32,
     color_mode="grayscale",
     class_mode="categorical",
 )
@@ -84,7 +84,7 @@ training_set = train_datagen.flow_from_directory(
 test_set = test_datagen.flow_from_directory(
     "myProcessData/test",
     target_size=(sz, sz),
-    batch_size=5,
+    batch_size=32,
     color_mode="grayscale",
     class_mode="categorical",
 )
@@ -100,10 +100,10 @@ checkpointer = ModelCheckpoint(filepath='img_model.best.hdf5',
 					
 r=model.fit(
     training_set,
-    steps_per_epoch=840,  # No of images in training set
-    epochs=5,
+    steps_per_epoch=22680,  # No of images in training set
+    epochs=50,
     validation_data=test_set,
-    validation_steps=360,
+    validation_steps=9720,
 	callbacks=[early_stop, checkpointer]
 )  # No of images in test set
 
