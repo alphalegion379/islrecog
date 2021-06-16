@@ -7,7 +7,6 @@ from keras.layers import Flatten
 from keras.layers import Dense, Dropout
 import os
 import matplotlib.pyplot as plt
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 sz = 128
 # Step 1 - Building the CNN
 
