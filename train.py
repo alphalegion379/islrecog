@@ -26,19 +26,9 @@ classifier.add(MaxPooling2D(pool_size=(2, 2)))
 classifier.add(Convolution2D(64, (3, 3), activation="relu"))
 classifier.add(MaxPooling2D(pool_size=(2, 2)))
 
-# If needed.....
-# fourth convolution layer and pooling
-# classifier.add(Convolution2D(32, (3, 3), activation='relu'))
-# classifier.add(MaxPooling2D(pool_size=(2, 2)))
-
 # Flattening the layers
 classifier.add(Flatten())
-
-# Adding a fully connected layer
-
-# classifier.add(Dense(units=128, activation='relu'))
-# classifier.add(Dropout(0.5))
-
+=
 classifier.add(Dense(units=128, activation="relu"))
 classifier.add(Dropout(0.5))
 
