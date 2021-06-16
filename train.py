@@ -70,8 +70,8 @@ test_set = test_datagen.flow_from_directory(
 )
 r=classifier.fit_generator(
     training_set,
-    steps_per_epoch=945,  # No of images in training set
-    epochs=5,
+    steps_per_epoch=1000,  # No of images in training set
+    epochs=15,
     validation_data=test_set,
     validation_steps=405,
 )  # No of images in test set
