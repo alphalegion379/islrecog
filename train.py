@@ -89,7 +89,7 @@ plt.plot(r.history['val_accuracy'], color='orange', label='test')
 plt.legend()
 plt.show()
 plt.savefig('AccVal_acc')
-
+#1
 
 # Saving the model
 model_json = classifier.to_json()
