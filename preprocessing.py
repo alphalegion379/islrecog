@@ -16,7 +16,7 @@ if not os.path.exists("myProcessData/test"):
 path = "myData/train"
 output = "myProcessData"
 a = ["label"]
-
+#1
 for i in range(128 * 128):
     a.append("pixel" + str(i))
 # outputLine = a.tolist()
