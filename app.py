@@ -133,6 +133,7 @@ class Application:
             self.panel5.config(text=self.str, font=("Raleway", 10))
 
         self.root.after(17, self.video_loop)
+   #1
 
     def predict(self, test_image):
         test_image = cv2.resize(test_image, (128, 128))
