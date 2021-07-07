@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 
 minValue = 70
-
+#1
 
 def func(path):
     frame = cv2.imread(path)
